@@ -1,0 +1,79 @@
+<legend>User Cars Search Engine</legend>
+<br>
+
+<form #formpart1="ngForm" (ngSubmit)="signin(formpart1)" required>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Make</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="Car Manufacturer" ngModel name="make" required>
+    </div>
+  </div>
+  <br>
+  <!-- model -->
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Model</label> 
+    <div class="col-sm-4">
+      <!-- <input type="text" class="form-control" id="inputPassword3" placeholder="select" ngModel name="model"> -->
+      <select class="form-control" id="inputPassword3" placeholder="select" ngModel name="model">
+          <option value="Civic">Civic</option>
+          <option value="Odyseey">Odyseey</option>
+          <option value="Pilot">Pilot</option>
+          <option value="Accord">Accord</option>
+        </select>
+    </div>
+  </div>
+  <br>
+<!-- year         -->
+  <div class="form-group row">
+    <label for="" class="col-sm-2 col-form-label">year</label> 
+    <div class="col-sm-4">
+      <input type="number" class="form-control" id="inputPassword3" placeholder="year" ngModel name="year">
+    </div>
+  </div>
+  <br>
+
+  <!-- type -->
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+      <div class="col-sm-4">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="type" id="gridRadios1" value="Sedan" ngModel checked>
+          <label class="form-check-label" for="gridRadios1">
+            Sedan
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="type" id="gridRadios2" value="Coupe" ngModel>
+          <label class="form-check-label" for="gridRadios2">
+            Coupe
+          </label>
+        </div>
+      
+      </div>
+    </div>
+  </fieldset>
+  <!-- <fieldset>
+    
+
+    <div>
+        <input type="checkbox" id="scales" name="feature" ngModel
+               value="bad" checked />
+        <label for="scales">Good</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="horns" name="feature" ngModel
+               value="bad" />
+        <label for="horns">bad</label>
+    </div>
+
+</fieldset> -->
+<br>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-danger center">next page</button>
+    </div>
+  </div>
+</form>
+
