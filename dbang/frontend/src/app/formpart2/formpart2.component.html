@@ -1,22 +1,25 @@
 <legend>PAGE 2</legend>
 <form #formpart2="ngForm" (ngSubmit)="signin(formpart2)" class="text-center">
 
-    <label ng-repeat="f in ['GPS', 'Decurity Lock', 'Cargo MAt']">
-        <input type="checkbox" checklist-model="f" ngModel name="features" value="f"> {{f}}
-    </label>
-
-    <label>
-        <input type="checkbox" ng-model="GPS" name="features" value="f">
-        GPS
-     </label>
-     <label>
-        <input type="checkbox" ng-model="GPS" name="features" value="f">
-        Decurity Lock
-     </label>
-     <label>
-        <input type="checkbox" ng-model="GPS" name="features" value="f">
-        Cargo MAt
-     </label>
+    <h5>Features</h5>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="GPS" id="GPS" ngModel name="GPS">
+      <label class="form-check-label" for="GPS">
+         GPS
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Security Lock" id="Security Lock" ngModel name="Security Lock">
+      <label class="form-check-label" for="Security Lock">
+         Security Lock
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Cargo Mat" id="Cargo Mat" ngModel name="Cargo Mat">
+      <label class="form-check-label" for="Cargo Mat">
+         Cargo Mat
+      </label>
+    </div>
      <br>
     
   <!-- purchase date -->
