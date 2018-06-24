@@ -210,7 +210,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Congratulations {{ formData.firstName }}  , your formData has been submitted with the folllowing details -->\n  \n<!-- <h1>Summary</h1>\n<ul>\n  <li>Gender: {{ formData.gender }}</li>\n  <li>Age:  {{ formData.age }}</li>\n  <li>Number of Tickets: {{ formData.numberOfTickets }}</li>\n</ul> -->\n<h1>The user selected the type</h1>\n<div><h1> {{ formData.make }} {{ formData.model }} {{ formData.year }} with {{ formData.features }} accessories on {{ formData.date }} </h1></div>\n\n\nthe user will get  "
+module.exports = "<!-- Congratulations {{ formData.firstName }}  , your formData has been submitted with the folllowing details -->\n  \n<!-- <h1>Summary</h1>\n<ul>\n  <li>Gender: {{ formData.gender }}</li>\n  <li>Age:  {{ formData.age }}</li>\n  <li>Number of Tickets: {{ formData.numberOfTickets }}</li>\n</ul> -->\n<h1>The user selected the type</h1>\n<div><h1> {{ formData.make }} {{ formData.model }} {{ formData.year }} with {{ formData.features }} accessories on {{ formData.date }} </h1></div>\n\n\nthe user will get  {{dis}}"
 
 /***/ }),
 
@@ -241,9 +241,13 @@ var FeedbackComponent = /** @class */ (function () {
     function FeedbackComponent(http) {
         this.http = http;
         this.formData = {};
+        this.dis = 0;
     }
     FeedbackComponent.prototype.ngOnInit = function () {
         this.formData = this.http.getForm();
+        var d = new Date(this.formData['date']);
+        console.log(d.getDate() % 2);
+        this.dis = d.getDate() % 2 == 0 ? 30 : 40;
         console.log(this.formData);
     };
     FeedbackComponent = __decorate([
